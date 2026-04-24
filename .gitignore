@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Packager artifacts
+hermes.exe
+icon-stub.exe
+icon.ico
+icon-preview-*.png
+
+# Environment (contains vault path / secrets)
+.env
+.env.local
+
+# Logs
+*.log
+hermes-error.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/

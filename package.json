@@ -1,0 +1,28 @@
+{
+  "name": "hermes-brain",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n server,client -c orange,cyan \"node server.js\" \"vite\"",
+    "server": "node server.js",
+    "client": "vite",
+    "build": "vite build",
+    "build-app": "node scripts/make-icon.mjs && vite build && caxa --input . --output hermes.exe --exclude node_modules/.cache --exclude .git --exclude src -- \"{{caxa}}/node_modules/.bin/node\" \"{{caxa}}/server.js\""
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.40.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "glob": "^11.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "caxa": "^3.0.1",
+    "concurrently": "^9.1.0",
+    "rcedit": "^5.0.2",
+    "vite": "^6.0.0"
+  }
+}
